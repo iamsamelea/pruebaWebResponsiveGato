@@ -1,0 +1,80 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    max-height: 100%;
+}
+
+.header-estilo{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    background-color: aquamarine;
+    max-width: 100%;
+}
+
+
+
+.container-main{
+    display: flex;
+    align-items: center;
+    margin: 25px;
+    margin-top: 150px;
+    column-gap: 25px;
+
+}
+
+.imagen-main img{
+
+    max-width: 100%;
+}
+
+.texto-main{
+    text-align: justify;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: burlywood;
+    width: 100%;
+    text-align: center;
+}
+
+/*Media Queries*/
+
+@media (max-width: 800px) {
+    .container-main{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        overflow: hidden;
+        margin-top: 75px;
+        max-width: 100%;
+        margin-bottom: 95px; /*Para que no haga conflicto con el position relative y no se esconda el texto detras*/
+    }
+
+    .imagen-main{
+        text-align: center;
+        max-width: 100%;
+    }
+
+
+    footer{
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        position: relative; /*Se pone al final de la pagina pero un plano por delante y tapa al texto*/
+    }
+
+
+}
+
+
